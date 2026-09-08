@@ -5,15 +5,12 @@ import { Header } from "../compnonents/Header";
 import homeFavicon from "../assets/images/home-favicon.png";
 import checkmarkIcon from "../assets/images/icons/checkmark.png";
 
-export function HomePage() {
+export function HomePage({ cart }) {
   const [products, setProduct] = useState([]);
-  const [cart, setCart] = useState([]);
+
   useEffect(() => {
     axios.get("/api/products").then((response) => {
       setProduct(response.data);
-    });
-    axios.get("/api/cart-items").then((response) => {
-      setCart(response.data);
     });
   }, []);
 
