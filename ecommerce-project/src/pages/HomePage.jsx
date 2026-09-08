@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./HomePage.css";
-import { Header } from "../compnonents/Header";
+import { Header } from "../compnonents/Header"; 
 import homeFavicon from "../assets/images/home-favicon.png";
 import checkmarkIcon from "../assets/images/icons/checkmark.png";
 
