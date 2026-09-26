@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useState, useEffect, Fragment } from "react";
-import { Header } from "../compnonents/Header";
+import { Header } from "../../../compnonents/Header";
 import { Link } from "react-router";
-import { formatMoney } from "../utils/Money";
+import { formatMoney } from "../../../utils/Money";
 import dayjs from "dayjs";
 import "./OrdersPage.css";
-import ordersFavicon from "../assets/images/orders-favicon.png";
-import buyAgainIcon from "../assets/images/icons/buy-again.png";
-export function OrdersPage({ cart }) {
+import ordersFavicon from "../../../assets/images/orders-favicon.png";
+import buyAgainIcon from "../../../assets/images/icons/buy-again.png";
+export function OrdersPage() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -79,7 +79,7 @@ export function OrdersPage({ cart }) {
                         </div>
 
                         <div className="product-actions">
-                          <Link href="/tracking">
+                          <Link to="/tracking">
                             <button className="track-package-button button-secondary">
                               Track package
                             </button>
